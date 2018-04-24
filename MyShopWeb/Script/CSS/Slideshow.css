@@ -1,0 +1,149 @@
+/* set border-box so that percents can be used for width, padding, etc (personal preference) */
+        .cycle-slideshow, .cycle-slideshow * { 
+            -webkit-box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+
+        }
+
+        .cycle-slideshow { 
+            width: 100%;
+            /*最大最小的長寬 建議1000x400*/
+            min-width: 200px; 
+            max-width:1000px; 
+            margin: 10px auto; 
+            padding: 0; 
+            position: relative;
+        }
+
+        /* slideshow images (for most of the demos, these are the actual "slides") */
+        .cycle-slideshow img { 
+            /* 
+            some of these styles will be set by the plugin (by default) but setting them here
+            helps avoid flash-of-unstyled-content
+            */
+            position: absolute; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            padding: 0; 
+            display: block;
+            
+
+        }
+        /*Mouse On 時 鼠標改成手手*/
+        .cycle-slideshow img:hover {
+            cursor:pointer;
+        }
+
+        /* in case script does not load */
+        .cycle-slideshow img:first-child {
+            position: static; 
+            z-index: 100;
+        }
+
+        /* 張數css */
+        .cycle-caption { 
+            position: absolute; 
+            color: white; 
+            bottom: 15px; 
+            right: 15px; 
+            z-index: 700; 
+
+        }
+
+        /*下面的黑框+文字的css*/
+        .cycle-overlay { 
+            font-family:'Microsoft JhengHei';
+            position: absolute; 
+            bottom: 0; 
+            width: 100%; 
+            /*重疊效果 數字越大圖層越前面*/
+            z-index: 600;
+            background: black; 
+            color: white; 
+            padding:15px;
+            
+            /*不透明度*/
+            opacity: 0.7;
+            font-size:25px;
+        }
+
+        /* pager 圖片右上角的圓圈 顯示第幾張 */
+        .cycle-pager { 
+            text-align: right; 
+            width: 100%; 
+            z-index: 500; 
+            position: absolute; 
+            top: 10px; 
+            overflow: hidden;
+            opacity: 0.3;
+            padding-right:15px;
+        }
+
+        .cycle-pager span { 
+            font-family: arial; 
+            font-size: 50px; 
+            width: 16px; 
+            height: 16px; 
+            display: inline-block; 
+            color: #ddd; 
+            cursor: pointer; 
+        }
+
+        .cycle-pager span.cycle-pager-active { 
+            color: #D69746;
+
+        }
+        .cycle-pager > * { 
+            cursor: pointer;
+
+        }
+
+
+        .divprice{
+            color:white;
+            float:right;
+        }
+
+        .beforeprice{
+            font-size:14px;
+            text-decoration:line-through;
+        }
+
+
+
+        /*  以下是商品清單的CSS  */
+
+        .GoodsListCss{
+            height:100%;
+            width:100%;
+            margin-left:5%;
+            margin-right:10%;
+   
+        }
+
+        .CommodityList_ul{
+            height:500px;
+            width:300px;
+            display: inline-block;
+            /*取消<li>的圓點*/
+            list-style-type:none;
+
+        }
+
+        .CommodityList_li_Image{
+            width:300px;
+
+        }
+        .CommodityList_li_Title{
+            width:300px;
+
+        }
+        .CommodityList_li_Price{
+            width:300px;
+
+        }
+        .CommodityList_li_Note{
+            width:300px;
+        }

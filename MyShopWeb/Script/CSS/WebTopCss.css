@@ -1,0 +1,225 @@
+        body {
+            font-family: 'Microsoft JhengHei';
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            overflow: visible;
+        }
+
+        /*最上面的Info bar*/
+        .LoginTopCss {
+            position: fixed; /*登入Bar的效果語法 不會隨滾動移動*/
+            width: 100%;
+            margin: 0px;
+            height: 50px;
+            width:100%;
+        }
+
+        /*放Info Bar按鈕的左邊div(靠左)*/
+        .LoginTopLeftCss {
+            background: hsla(0, 0%, 15%, 0.9);
+            margin: 0px;
+            height: 50px;
+            width:50%;
+            float:left;
+        }
+
+        /*放Info Bar按鈕的右邊div(靠右)*/
+        .LoginTopRightCss {
+            background: hsla(0, 0%, 15%, 0.9);
+            margin: 0px;
+            height: 50px;
+            width:50%;
+            float:left;
+        }
+
+        /*Info bar 裡面的Label(顯示登入者帳號)*/
+        .LoginLabel {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            height: 50px;
+            
+        }
+
+        /*回首頁圖片*/
+        input[type=image] {
+            padding-left: 20px;
+            padding-right: 20px;
+            height: 50px;
+        }
+
+        /*回首頁圖片 Mouse On 事件的CSS*/
+        input[type=image]:hover {
+            background-color: #555;
+        }
+
+       
+
+        /* ---------- 以下都是下拉選單的CSS架構 ---------- */
+
+        /*第一層向右*/
+        #RightMenu{
+            float:right;    
+        }   
+
+        /*第一層向左*/
+        #LeftMenu {
+            float:left;
+        }
+    
+        .MenuCss ul {
+	        /* 取消ul樣式符號 */
+	        list-style-type:none;
+	        /* 重設ul邊界與留白為零 */
+	        margin:0;
+	        padding:0;
+	        /* 內有浮動元件時，需設overflow才會自動調整大小 */
+	        overflow:auto;
+            float:right;
+        }
+
+        .MenuCss ul li {
+	        /* 利用float讓第一層li水平排列 */
+	        float:left;
+        }
+
+        .MenuCss ul li a {
+	        /* 將a改為區塊元件，以便指定寬高 */
+	        display:block;
+	        /* 這邊也要設float，否則IE6會以100%寬度顯示 */
+	        float:left;
+	        /* 固定高度 */
+	        height:50px;
+	        width: 150px;
+        }
+
+        .MenuCss ul li ul {
+	        /* 讓第二層ul跳脫文件流以利定位 */
+	        position:absolute;
+	        /* 固定寬度 */
+	        width:200px;
+	        /* 避免出現捲軸 */
+	        overflow:visible;
+	        /* 讓ul與母階層li相同位置 */
+	        clear:left;
+	        margin-top: 50px;
+	        margin-right: 0;
+	        margin-bottom: 0;
+	        margin-left: 0;
+        }
+
+        /*讓登入後 出現的登出下拉選單 不會超過邊界 設與第一層寬度一樣*/
+        #RightMenu ul li ul{
+            width:150px;
+        }
+
+
+        .MenuCss ul li ul li {
+	        /* 覆寫繼承自第一層的浮動設定 */
+	        float:none;
+	        text-align: center;
+        }
+
+        .MenuCss ul li ul li a {
+	        /* 覆寫繼承自第一層的浮動設定 */
+	        float:none;
+	        width: 100%;/* 註：display、height、padding繼承第一層的設定 */
+        }
+
+        .MenuCss ul li ul li ul {
+	        margin-top: -50px;
+	        margin-right: 0;
+	        margin-bottom: 0;
+	        margin-left: 200px;
+	        width: 100%;
+        }
+
+        .MenuCss ul li ul li ul li {
+        /* width、float繼承第二層，免設定 */
+        float:none;
+        }
+
+        .MenuCss ul li ul li ul li a {
+        /* width、float繼承第二層，免設定 */
+        float:none;
+        }
+
+        /* ---------- 隱藏與顯示階層 ---------- */
+        .MenuCss ul li ul {
+	        /* 預先隱藏第二層 */
+	        visibility:hidden;
+        }
+
+        .MenuCss ul li:hover ul {
+	        /* 觸動第一層時，顯示第二層 */
+	        visibility:visible;
+        
+            }
+
+        .MenuCss ul li:hover ul li ul {
+	        /* 顯示第二層時，隱藏第三層，避免同時彈出 */
+	        visibility:hidden;
+        }
+
+        .MenuCss ul li ul li:hover ul {
+	        /* 觸動第二層時，顯示第三層 */
+	        visibility:visible;
+        }
+        .MenuCss ul li ul li:hover ul li ul {
+	        /* 顯示第三層時，隱藏第四層，避免同時彈出 */
+	        visibility:hidden;
+        }
+        .MenuCss ul li ul li ul li:hover ul {
+	        /* 觸動第三層時，顯示第四層 */
+	        visibility:visible;
+        }
+
+
+        /* ---------- 以下為美化用，非必需 ---------- */
+        /* 預設字體 */
+        .MenuCss {
+	        font-size:20px;
+            text-align:center;
+        }
+
+        /* 第一層ul背景色彩與邊框 */
+        .MenuCss ul {
+	
+        }
+
+        /* 第一層a字型 */
+        .MenuCss ul li a {
+            line-height:50px;
+	        color:#fff;
+	        text-decoration:none;
+            /*讓文字置中*/
+	        line-height: 50px;
+        }
+
+        /*第二層ul背景色彩與邊框  */
+        .MenuCss ul li ul {
+	        background: #666;
+        }
+
+        /* 第二層a字型 */
+        .MenuCss ul li ul li a {
+	        font-size:20px;
+	        color:#fff;
+	        text-decoration:none;
+        }
+
+        /* 觸動第一層li時，改變背景色 */
+        .MenuCss ul li:hover, .MenuCss ul li a:hover {
+	        background:#666;
+        }
+
+        .MenuCss ul li:hover a {
+	        color:#fff;
+        }
+
+        /* 觸動第二層以上li時改變背景色 */
+        .MenuCss ul li ul li:hover, .MenuCss ul li ul li a:hover {
+	        background:#000;
+        }

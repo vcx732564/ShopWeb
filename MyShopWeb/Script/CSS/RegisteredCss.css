@@ -1,0 +1,130 @@
+body {
+    font-family: Microsoft JhengHei;
+    background-image: url(../../Images/LoginBackGround.jpg);
+}
+
+.divset {
+    padding: 100px 110px 50px 0px;
+    margin: 0 auto;
+    position: relative;
+    position: static !important;
+    position: absolute;
+    top: 100%;
+    width: 30%;
+    left: 25%;
+}
+
+fieldset {
+    width: 700px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border: 0px;
+    margin-bottom: 10px;
+    background-color: hsla(0, 0%, 15%, 0.9);
+    border-left: 50px;
+    position: relative;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ForRegiestedMsgDiv {
+    width: 30%;
+
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+
+    border: 0px;
+    margin-bottom: 10px;
+    background-color:hsla(0, 0%, 15%, 0.9);
+    position: relative;
+    text-align:center;
+    color:white;
+
+}
+
+
+legend {
+    text-align: center;
+    font-size: 36px;
+    background-color: #44c767;
+    color: #FFF;
+    /*FireFox=*/ -moz-border-radius: 8px;
+    /*Chrome=*/ -webkit-border-radius: 8px;
+    /*IE*/ border-radius: 8px;
+    position: absolute;
+    left: 20px;
+    top: -40px;
+    border-width: 4px;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+span {
+    color: white;
+    width: 150px;
+    /*讓Span的長度設定有效*/
+    display: inline-block;
+}
+
+.tbl {
+    border: 0px solid black;
+    -webkit-border-radius: 7px;
+}
+
+.btn {
+    width: 250px;
+    font-size: 16px;
+    background-color: #44c767;
+    border: 0px;
+    /*圓邊*/
+    /*FireFox=*/ -moz-border-radius: 5px;
+    /*Chrome=*/ -webkit-border-radius: 5px;
+    /*IE*/ border-radius: 7px;
+    display: inline-block;
+    /*滑鼠鼠標變化*/
+    cursor: pointer;
+    color: #ffffff;
+    /*物件間隔*/
+    padding: 8px 76px;
+    /*動作時間(IE不支援)*/
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+
+td {
+    padding-bottom: 14px;
+}
+/*Mouse over*/
+.btn:hover {
+    background-color: #199010;
+}
+
+.Textboxset {
+    font-size: 16px;
+    text-align: left;
+    border: 0px 0px 0px 0px;
+    /*FireFox=*/ -moz-border-radius: 3px;
+    /*Chrome=*/ -webkit-border-radius: 3px;
+    /*IE*/ border-radius: 3px;
+    padding: 5px 0px 5px 10px;
+    /*透明背景
+            background-color: transparent;*/
+    border: solid 3px #ffffff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+    .Textboxset:focus {
+        border: solid 3px #44c767;
+    }
+
+input[type=Radio] {
+    height: 20px;
+    width: 20px;
+    padding-right: 7px;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
