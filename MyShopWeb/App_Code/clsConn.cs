@@ -29,7 +29,7 @@ public class clsConn
         ConnectionStringBuild.UserID = "sa";
         ConnectionStringBuild.Password = "sa";
         string ConnStr = ConnectionStringBuild.ConnectionString;*/
-        string ConnStr = "Data Source=BENSONWORK;Initial Catalog=ShopWeb;User ID=sa;Password=sa";
+        string ConnStr = "Data Source=RPaGearNB;Initial Catalog=ShopWeb;User ID=sa;Password=sa";
         SqlConnection Conn = new SqlConnection(ConnStr);
         Conn.Open();
 
